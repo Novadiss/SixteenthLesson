@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.HashMap;
+
 public class GameTest {
 
     Player alfa = new Player(1, "Max", 125);
@@ -85,5 +87,21 @@ public class GameTest {
         Assertions.assertThrows(NotRegisteredException.class,
                 () -> game.round("Bull", "Grek"));
 
+    }
+
+    @Test
+    public void temp() {
+        HashMap<String, Integer> param = new HashMap<>();
+
+        param.put("Max", 125);
+        param.put("Forest", 100);
+        param.put("Bull", 140);
+        param.put("Shark", 110);
+        param.put("Snake", 100);
+
+        int actual = param.get("Max");
+        int expected = 125;
+
+        Assertions.assertEquals(expected, actual);
     }
 }
