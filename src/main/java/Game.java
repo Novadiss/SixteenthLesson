@@ -39,13 +39,11 @@ public class Game {
         }
     }
 
-    public Player findById(int id) {
-        for (Player player : players) {
-            if (player.getId() == id) {
-                return player;
-            }
+    public static void main(String[] args) {
+        HashMap<String, Integer> param = new HashMap<>();
+        for (String key : param.keySet()) {
+            Integer value = param.get(key);
         }
-        return null;
     }
 }
 
